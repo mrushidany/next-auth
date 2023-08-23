@@ -13,9 +13,8 @@ const authOptions = {
                 try {
 
                 } catch (error) {
-                    
+
                 }
-                return user;
             },
         })
     ],
