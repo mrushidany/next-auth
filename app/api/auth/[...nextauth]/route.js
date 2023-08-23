@@ -1,3 +1,4 @@
+import axios from "axios"
 import NextAuth from "next-auth/next"
 import CredentialsProvider from "next-auth/providers/credentials"
 
@@ -8,10 +9,9 @@ const authOptions = {
             credentials:{},
 
             async authorize(credentials) {
-                const { email, password } = credentials
-
                 try {
-
+                    const response = await axios.post(`${process.env.API_URL}/auth/login`, credentials)
+                    console.log(response);
                 } catch (error) {
 
                 }

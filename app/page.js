@@ -29,8 +29,7 @@ export default function Home() {
     event.preventDefault()
 
     try {
-      const res = await signIn('credentials', form) 
-      console.log(res);
+      const res = await signIn('credentials', form)
       if(res.error) {alert('Invalid Credentials'); return}
       router.replace('dashboard')
     } catch (error) {
