@@ -8,7 +8,13 @@ const authOptions = {
             credentials:{},
 
             async authorize(credentials) {
-                const user = { id: '1'}
+                const { email, password } = credentials
+
+                try {
+
+                } catch (error) {
+                    
+                }
                 return user;
             },
         })
